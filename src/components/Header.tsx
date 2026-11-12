@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tv, Download, RefreshCw, FileText } from 'lucide-react';
 
-export type ActiveTab = 'generator' | 'portability' | 'network' | 'libraries' | 'docker' | 'sync' | 'tester';
+export type ActiveTab = 'generator' | 'portability' | 'github' | 'network' | 'libraries' | 'docker' | 'sync' | 'tester';
 
 interface HeaderProps {
   activeTab: ActiveTab;
@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Zone 2: Clean single-line text navigation links */}
-      <nav className="hidden lg:flex items-center gap-5 text-xs xl:text-sm font-medium text-slate-300">
+      <nav className="hidden lg:flex items-center gap-4 text-xs font-medium text-slate-300">
         <button
           onClick={() => setActiveTab('generator')}
           className={`hover:text-white transition-colors whitespace-nowrap shrink-0 pb-1 border-b-2 ${
@@ -56,7 +56,18 @@ export const Header: React.FC<HeaderProps> = ({
               : 'border-transparent text-slate-400'
           }`}
         >
-          Portabilidad & Migración
+          Portabilidad
+        </button>
+
+        <button
+          onClick={() => setActiveTab('github')}
+          className={`hover:text-white transition-colors whitespace-nowrap shrink-0 pb-1 border-b-2 ${
+            activeTab === 'github'
+              ? 'border-indigo-500 text-white font-semibold'
+              : 'border-transparent text-slate-400'
+          }`}
+        >
+          GitHub & Portada
         </button>
 
         <button

@@ -8,6 +8,7 @@ import {
 import { Header, ActiveTab } from './components/Header';
 import { GeneratorTab } from './components/GeneratorTab';
 import { PortabilityTab } from './components/PortabilityTab';
+import { GitHubGuideTab } from './components/GitHubGuideTab';
 import { NetworkConfigTab } from './components/NetworkConfigTab';
 import { LibrariesManagerTab } from './components/LibrariesManagerTab';
 import { DockerComposeTab } from './components/DockerComposeTab';
@@ -230,6 +231,12 @@ export default function App() {
             items={items}
             onUpdateNetwork={handleUpdateNetwork}
             onTestUrl={handleTestUrl}
+          />
+        )}
+
+        {activeTab === 'github' && (
+          <GitHubGuideTab
+            coverImagePath="/src/assets/images/cover_strm_engine_1794495903737.jpg"
           />
         )}
 
