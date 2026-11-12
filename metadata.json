@@ -1,0 +1,6 @@
+{
+  "name": "STRM Bridge",
+  "description": "Generador de archivos .strm para transmisión remota con Nginx Proxy Manager, DuckDNS y ZimaOS/CasaOS para Plex, Jellyfin, Emby y VLC.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
